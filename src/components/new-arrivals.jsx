@@ -1,39 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
-// Products component to fetch and log the data
-function Products() {
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products/')
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-        setIsLoading(false);
-      })
-      .catch((error) => {
-        setError(error);
-        setIsLoading(false);
-      });
-  }, []);
-
-  useEffect(() => {
-    if (data) {
-      console.log(data);
-    }
-  }, [data]);
-
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error fetching products: {error.message}</div>;
-
-  return (
-    <div>
-      <h2>Fetched Products (Check console for details)</h2>
-    </div>
-  );
-}
+import { Link } from 'react-router-dom';
 
 // NewArrivals component to display the fetched products
 function NewArrivals() {
@@ -69,7 +35,13 @@ function NewArrivals() {
         {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {limitedProducts.map((product) => (
-            <div key={product.id} className="bg-white p-4 rounded-lg shadow-md">
+            <Link
+              key={product.id}
+              to={`/product-details?id=${product.id}&title=${encodeURIComponent(
+                product.title
+              )}&image=${encodeURIComponent(product.image)}&price=${product.price}`}
+              className="bg-white p-4 rounded-lg shadow-md"
+            >
               <div className="top">
                 <img
                   src={product.image}
@@ -93,18 +65,16 @@ function NewArrivals() {
               <div className="d-price mt-2">
                 <h5 className="text-xl font-bold text-black">${product.price}</h5>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        <a href="/" className="px-10 py-2 text-black rounded-full bg-white border-2 border-gray-200 text-center  hidden">
-        View All
+        <a href="/" className="px-10 py-2 text-black rounded-full bg-white border-2 border-gray-200 text-center hidden">
+          View All
         </a>
       </div>
     </section>
   );
 }
 
-// Export both components
-export { Products, NewArrivals };
-
+export { NewArrivals };

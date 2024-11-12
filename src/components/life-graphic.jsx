@@ -1,7 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function LifeGraphic() {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
+
+  // Extract URL parameters
+  const queryParams = new URLSearchParams(location.search);
+  const id = queryParams.get('id');
+  const title = queryParams.get('title');
+  const image = queryParams.get('image');
+  const price = queryParams.get('price');
+
+  // Redirect to homepage if any parameter is missing
+  useEffect(() => {
+    if (!id || !title || !image || !price) {
+      navigate('/');
+    }
+  }, [id, title, image, price, navigate]);
 
   const handleQuantityChange = (value) => {
     if (value >= 1) {
@@ -14,23 +31,23 @@ function LifeGraphic() {
       <div className="container max-w-6xl w-max mx-auto grid grid-cols-2 gap-5 py-14 px-12">
         <div className="left grid grid-cols-[max-content_auto] mt-4 gap-4">
           <div className="col-1">
-            <a href="" className="w-36 h-36 bg-gray-200 mb-4">
+            <a href="#" className="w-36 h-36 bg-gray-200 mb-4">
               <img src="#" alt="" />
             </a>
-            <a href="" className="w-36 h-36 bg-gray-200 mb-4">
+            <a href="#" className="w-36 h-36 bg-gray-200 mb-4">
               <img src="#" alt="" />
             </a>
-            <a href="" className="w-36 h-36 bg-gray-200 mb-4">
+            <a href="#" className="w-36 h-36 bg-gray-200 mb-4">
               <img src="#" alt="" />
             </a>
           </div>
-          <div className="col-2 bg-gray-200">
-            <img src="#" alt="" className="" />
+          <div className="col-2 border-2 border-gray-400 w-full object-cover object-center">
+            <img src={image} alt="Product" className="" />
           </div>
         </div>
 
         <div className="right">
-          <h2 className="font-bold text-4xl text-black py-2">ONE LIFE GRAPHIC T-SHIRT</h2>
+          <h2 className="font-bold text-4xl text-black py-2">{title}</h2>
           <div className="icons py-4">
             <span><i className="bi bi-star-fill star text-yellow-400"></i></span>
             <span><i className="bi bi-star-fill star text-yellow-400"></i></span>
@@ -39,12 +56,12 @@ function LifeGraphic() {
             <span><i className="bi bi-star-fill star text-yellow-400"></i></span>
           </div>
           <div className="d-price flex flex-row gap-2 py-4">
-            <h5 className="text-xl font-bold text-black">$260</h5>
-            <span className="text-xl font-bold text-gray-500">$300</span>
+            <h5 className="text-xl font-bold text-black">${(price * 0.9).toFixed(2)}</h5>
+            <span className="text-xl font-bold text-gray-500"><del>$300</del></span>
             <span className="per bg-[#FF33331A] text-xs text-red-500 font-light rounded-full pt-1 pr-2 pb-1 pl-2 text-center">-%40</span>
           </div>
-          <p className="text-base font-normal text-gray-500 py-2">
-            This graphic t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
+          <p className="text-lg font-normal text-gray-500 py-2">
+            This product is perfect for any occasion. 
           </p>
           <hr />
           <div className="select-colours py-4">
