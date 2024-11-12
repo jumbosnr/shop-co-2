@@ -1,0 +1,16 @@
+@media screen and (max-width: 1080px) {
+  section.shopping-cart .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  section.shopping-cart .container .left .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  section.shopping-cart .container .left .item .product-functions {
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
+  }
+}/*# sourceMappingURL=shopping-cart.css.map */

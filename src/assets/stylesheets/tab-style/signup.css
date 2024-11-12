@@ -1,0 +1,8 @@
+@media screen and (max-width: 1080px) {
+  section.sign-up .container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    place-content: center;
+  }
+}/*# sourceMappingURL=signup.css.map */

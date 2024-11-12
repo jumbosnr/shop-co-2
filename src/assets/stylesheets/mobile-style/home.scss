@@ -1,0 +1,145 @@
+@media screen and (max-width: 560px){
+    section.hero{
+        .container{
+            display:grid;
+            grid-template-columns: 100%;
+            .left{
+                .text{
+                    h1{
+                        font-size: 32px;
+                        line-height: 1.2;
+                        text-align: left;
+                        max-width: 300px;
+                    }
+                    p{
+                        max-width: 400px;
+                        line-height: 1.2;
+                        text-align: left;
+                    }
+                    a{
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                }
+                .fig{
+                    display:grid;
+                    grid-template-columns: Repeat(2,(1fr));
+                    .fig-item-1 {
+                        border-right: 1px solid gray;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        span{
+                            max-width: 100px;
+                            text-align: center;
+                        }
+                    }
+                    .fig-item{
+                        justify-self:center;
+                        span{
+                            display: block;
+                            text-align: center;
+                        }
+                    }
+                    .fig-item-3{
+                        grid-column: 1/3;
+                        justify-self:center;
+                    }
+                }
+            }
+        }
+    }
+
+    section.top-banner{
+        .container{
+            .banner{
+                display: grid;
+                grid-template-columns: repeat(6,1fr);
+                row-gap: 12px;
+                column-gap: 10px;
+                .versace{
+                    grid-column: 1/3;
+                    justify-self: center;
+                    height: 18px;
+                }
+                .zara{
+                    grid-column: 3/5;
+                    justify-self: center;
+                    height: 18px;
+                    
+                }
+                .gucci{
+                    grid-column: 5/7;
+                    justify-self: center;
+                    height: 18px;
+                    
+                }
+                .prada{
+                    grid-column: 1/4;
+                    justify-self: center;
+                    height: 18px;
+                    justify-self: right;
+                }
+                .klein{
+                    justify-self: center;
+                    grid-column: 4/7;
+                    height: 18px;
+                    justify-self: left;
+                }
+            }
+        }
+    }
+
+    section.new-arrivals{
+        .container{
+            a{
+                display: block;
+            }
+        }
+    }
+    
+    
+    section.top-selling{
+        .container{
+            a{
+                display: block;
+            }
+        }
+    }
+
+    section.dress-style{
+        .container{
+            padding: 20px;
+            margin: auto;
+            width: 100%;
+            h2{
+                text-align: center;
+            }
+            .wrapper{
+                display: grid;
+                grid-template-columns: 100%;
+                padding: unset;
+                .pic{
+                    grid-column: unset;
+                    img{
+                        width:100%  !important;
+                    }
+               } 
+            }
+        }
+    }
+
+    section.happy-cus{
+        .container{
+            h2{
+                text-align:left;
+            }
+            .cus{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+        }
+    }
+}

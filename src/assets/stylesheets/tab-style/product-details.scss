@@ -1,0 +1,48 @@
+@media screen and (max-width: 1080px){
+    // padding: 48px 48px;
+    section.life-graphic{
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 20px;
+            .left{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+            .right{
+                h2{
+                    // text-align: center;
+                }
+                .icons{
+                    // text-align: center;
+                }
+                .size{
+                    a{
+                        border-radius: 20px;
+                        width: max-content;
+                    }
+                }
+                .add-btn{
+                    .qt{
+                        width: max-content
+                    }
+                }
+            }
+
+        }
+    }
+
+    section.also-like{
+        .container{
+            h2{
+                text-align: center;
+            }
+            .items{
+                display:grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+            }
+        }
+    }
+    
+}

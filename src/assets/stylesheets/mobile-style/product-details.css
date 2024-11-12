@@ -1,0 +1,28 @@
+@media screen and (max-width: 560px) {
+  section.life-graphic .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  section.life-graphic .container .left .col-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  section.life-graphic .container .right h2 {
+    max-width: 350px;
+    text-align: left;
+  }
+  section.life-graphic .container .right p {
+    max-width: 400px;
+    text-align: left;
+  }
+  section.hpy-cus .container .wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  section.also-like .container h2 {
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 30px;
+  }
+}/*# sourceMappingURL=product-details.css.map */

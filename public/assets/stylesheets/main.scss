@@ -1,0 +1,16 @@
+@media screen and (max-width: 1080px){
+    header{
+        display: none;
+        .container{
+            nav{
+                // display: none;
+            }
+            .search-box{
+                input{
+                    // display: none !important;
+                }
+            }
+        }
+        
+    }
+}

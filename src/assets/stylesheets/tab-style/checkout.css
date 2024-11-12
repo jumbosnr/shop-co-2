@@ -1,0 +1,19 @@
+@media screen and (max-width: 1080px) {
+  section.check-out .container {
+    margin: auto;
+  }
+  section.check-out .container h2 {
+    text-align: center;
+  }
+  section.check-out .container .billing-details {
+    display: grid;
+    grid-template-columns: 100% !important;
+  }
+  section.check-out .container .billing-details .left {
+    padding: 20px;
+  }
+  section.check-out .container .billing-details .right {
+    height: unset;
+    padding: 20px;
+  }
+}/*# sourceMappingURL=checkout.css.map */

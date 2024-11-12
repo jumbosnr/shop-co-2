@@ -1,0 +1,67 @@
+.h-menu {
+  display: none !important;
+}
+
+@media screen and (max-width: 1080px) {
+  body.active {
+    overflow: hidden;
+  }
+  header {
+    position: relative;
+  }
+  header .container .h-menu {
+    display: inline-block !important;
+    font-size: 50px;
+    font-weight: 500;
+    align-items: center;
+  }
+  header .container nav {
+    display: block;
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    transform: translateY(100%);
+    height: 100vh !important;
+    width: 80%;
+    max-width: 600px;
+    background: #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  header .container nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+  }
+  header .container nav.active {
+    left: 0;
+    opacity: 1;
+  }
+  header .container .search-box input {
+    display: none !important;
+  }
+  section.latest-offer .container {
+    padding: 30px;
+  }
+  section.latest-offer .container .wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 80px;
+  }
+  section.latest-offer .container .wrapper .left h2 {
+    line-height: 1.2;
+  }
+  footer .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  footer .container .left {
+    max-width: 650px;
+  }
+  footer .container .bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,41 @@
+@media screen and (max-width: 1080px){
+    section.hero{
+        .container{
+            grid-template-columns: 100%;
+            .left{
+                .text{
+                    h1{
+                        text-align: center;
+                        width: unset;
+                        line-height: 1.5;
+                    }    
+                    p{
+                        text-align: center;
+                        line-height: 1.5;
+                    }
+                    a{
+                        margin: auto;
+                        width: max-content;
+                        display: block;
+                    }
+                    
+                }
+            }
+
+            .fig{
+                place-content: center;
+               
+            }
+
+        }
+    }
+    
+    section.happy-cus{
+        .container{
+            .grid{
+                display: grid;
+                grid-template-columns: repeat(2,(1fr));
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@media screen and (max-width: 1080px) {
+  .container {
+    margin: auto;
+  }
+  .container .right img {
+    display: none;
+  }
+}/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,45 @@
+@media screen and (max-width: 560px){
+    section.life-graphic{
+        .container{
+            display: grid;
+            grid-template-columns: 100%;
+            .left{
+               .col-1{
+                display: grid;
+                grid-template-columns: repeat(3,(1fr));
+               } 
+            }
+            .right{
+                h2{
+                    max-width: 350px;
+                    text-align: left;
+                }
+                p{
+                    max-width: 400px;
+                    text-align: left;
+
+                }
+            }
+        }
+    }
+
+    section.hpy-cus{
+        .container{
+            .wrapper{
+                display: grid;
+                grid-template-columns: 100%;
+            }
+        }
+    }
+
+    section.also-like{
+        .container{
+            h2{
+                max-width: 300px;
+                text-align: center;
+                margin: auto;
+                padding-bottom: 30px;
+            }
+        }
+    }
+}

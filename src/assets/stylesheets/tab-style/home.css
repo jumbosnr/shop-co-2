@@ -1,0 +1,27 @@
+@media screen and (max-width: 1080px) {
+  section.hero .container {
+    grid-template-columns: 100%;
+  }
+  section.hero .container .left .text h1 {
+    text-align: center;
+    width: unset;
+    line-height: 1.5;
+  }
+  section.hero .container .left .text p {
+    text-align: center;
+    line-height: 1.5;
+  }
+  section.hero .container .left .text a {
+    margin: auto;
+    width: -moz-max-content;
+    width: max-content;
+    display: block;
+  }
+  section.hero .container .fig {
+    place-content: center;
+  }
+  section.happy-cus .container .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}/*# sourceMappingURL=home.css.map */

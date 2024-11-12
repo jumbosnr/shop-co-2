@@ -1,0 +1,48 @@
+@media screen and (max-width: 560px) {
+  header .container .h-menu {
+    display: inline-block !important;
+    font-size: 50px;
+    font-weight: 500;
+    align-items: center;
+  }
+  header .container nav {
+    display: none;
+  }
+  header .container .search-box input {
+    display: none !important;
+  }
+  section.latest-offer .container.main {
+    padding: 20px;
+    margin: 20px 20px;
+    width: unset;
+  }
+  section.latest-offer .container.main .wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 20px;
+  }
+  section.latest-offer .container.main .wrapper .left h2 {
+    line-height: 1.2 !important;
+    font-size: 32px !important;
+  }
+  section.latest-offer .container.main .wrapper .right form .input-box {
+    width: 100% !important;
+  }
+  section.latest-offer .container.main .wrapper .right form button {
+    width: 100% !important;
+  }
+  footer .container {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  footer .container .left {
+    max-width: 650px;
+  }
+  footer .container .right {
+    grid-template-columns: 100%;
+  }
+  footer .container .bottom {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+}/*# sourceMappingURL=m-main.css.map */

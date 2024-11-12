@@ -1,0 +1,19 @@
+@media screen and (max-width: 1080px) {
+  section.casual .product .row-1 {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  section.casual .product .row-2 {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  section.casual .product .row-3 {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  main aside {
+    padding-bottom: 40px;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}/*# sourceMappingURL=store.css.map */

@@ -1,0 +1,28 @@
+@media screen and (max-width: 1080px) {
+  section.life-graphic .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  section.life-graphic .container .left {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  section.life-graphic .container .right .size a {
+    border-radius: 20px;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  section.life-graphic .container .right .add-btn .qt {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  section.also-like .container h2 {
+    text-align: center;
+  }
+  section.also-like .container .items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}/*# sourceMappingURL=product-details.css.map */
