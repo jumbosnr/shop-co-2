@@ -1,22 +1,23 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function ProductSection() {
   const { data, error, isLoading } = useQuery({
-    queryKey: ['products'], // Unique key for the query
+    queryKey: ['products'],
     queryFn: async () => {
       const response = await axios.get('https://fakestoreapi.com/products');
-      return response.data; // Returning the product data
+      return response.data;
     },
   });
 
   if (isLoading) {
-    return <div>Loading...</div>; // Loading state
+    return <div>Loading...</div>;
   }
 
   if (error) {
-    return <div>Error fetching products</div>; // Error state
+    return <div>Error fetching products</div>;
   }
 
   return (
@@ -41,7 +42,11 @@ function ProductSection() {
       <div className="product max-w-6xl mx-auto">
         <div className="row-1 grid grid-cols-3 gap-4 mb-4">
           {data.slice(0, 9).map((product) => (
-            <div key={product.id} className="col-1 px-4 py-4">
+            <Link
+              to={`/product-details?id=${product.id}&title=${encodeURIComponent(product.title)}&image=${encodeURIComponent(product.image)}&price=${product.price}`}
+              key={product.id}
+              className="col-1 px-4 py-4 transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
+            >
               <div className="top">
                 <img
                   src={product.image}
@@ -49,9 +54,9 @@ function ProductSection() {
                   className="w-full h-64 rounded-xl object-contain object-center"
                 />
               </div>
-              <div className="bottom">
+              <div className="bottom mt-4">
                 <p className="text-lg font-semibold mb-2">{product.title}</p>
-                <div className="icon">
+                <div className="icon mb-2">
                   {[...Array(5)].map((_, index) => (
                     <span key={index}>
                       <i className="bi bi-star-fill star text-yellow-400"></i>
@@ -62,10 +67,9 @@ function ProductSection() {
                   <h5 className="text-xl font-bold text-black">${product.price}</h5>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
-        {/* Repeat similar blocks for other product rows, or adjust according to your layout */}
       </div>
     </section>
   );

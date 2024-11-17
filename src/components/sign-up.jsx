@@ -67,16 +67,16 @@ function SignUpC() {
               
               <p className="grid place-content-center py-3 font-semibold">OR</p>
 
-              <button
-                name="continue"
-                type="button"
-                className="px-10 py-3 rounded-lg text-lg font-semibold text-black border-2 border-gray-200 focus:bg-gray-200 w-full mb-2"
+              <p
+                className="px-10 py-3 rounded-lg text-lg font-semibold text-black text-center   w-full mb-2"
               >
-                Login with a code instead
-              </button>
+                <span>Have an account?  </span>
+                <a  
+                  href="/login" className="text-red-500"
+                >
 
-              <p className="text-center">
-                Go passwordless! We’ll send you an email
+                 Login 
+                </a>
               </p>
               
               <a href="#" className="text-black px-10 py-3 text-base font-semibold text-center block">

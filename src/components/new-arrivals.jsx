@@ -40,7 +40,7 @@ function NewArrivals() {
               to={`/product-details?id=${product.id}&title=${encodeURIComponent(
                 product.title
               )}&image=${encodeURIComponent(product.image)}&price=${product.price}`}
-              className="bg-white p-4 rounded-lg shadow-md"
+              className="bg-white p-4  transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
             >
               <div className="top">
                 <img

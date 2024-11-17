@@ -1,34 +1,47 @@
-import React from 'react';
-import { useQuery } from '@tanstack/react-query';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-function Products() {
-  const fetchProducts = async () => {
-    const res = await fetch('https://fakestoreapi.com/products');
-    if (!res.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return res.json();
-  };
+// NewArrivals component to display the fetched products
+function TopSelling() {
+  const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const { data, error, isLoading } = useQuery({
-    queryKey: ['products'],
-    queryFn: fetchProducts,
-  });
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products/?sort=dasc')
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setIsLoading(false);
+      });
+  }, []);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (isLoading) return <div>Loading products...</div>;
+  if (error) return <div>Error loading products: {error.message}</div>;
+
+  const limitedProducts = data?.slice(0, 4) || [];
 
   return (
-    <section className="top-selling py-14">
+    <section className="new-arrivals py-14">
       <div className="container mx-auto max-w-6xl px-12">
         <h2 className="font-bold text-4xl flex justify-center text-black mb-6">
           TOP SELLING
         </h2>
 
         {/* Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
-          {data.slice(0, 4).map((product) => (
-            <div className="bg-white p-4 rounded-lg shadow-md" key={product.id}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+          {limitedProducts.map((product) => (
+            <Link
+              key={product.id}
+              to={`/product-details?id=${product.id}&title=${encodeURIComponent(
+                product.title
+              )}&image=${encodeURIComponent(product.image)}&price=${product.price}`}
+              className="bg-white p-4 transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
+            >
               <div className="top">
                 <img
                   src={product.image}
@@ -51,9 +64,8 @@ function Products() {
               </div>
               <div className="d-price mt-2">
                 <h5 className="text-xl font-bold text-black">${product.price}</h5>
-                {/* Optional salePrice handling can be added if required */}
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -65,4 +77,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default TopSelling;

@@ -22,7 +22,7 @@ function Hero() {
             </p>
             <a
               className="bg-black hover:bg-gray-700 text-white text-xl leading-2 rounded-full pt-2 pr-10 pb-3 pl-10 mb-6 font-extralight inline-block"
-              href="#"
+              href="/store"
             >
               Shop Now
             </a>

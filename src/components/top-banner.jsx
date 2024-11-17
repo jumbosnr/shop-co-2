@@ -11,24 +11,24 @@ function TopBanner() {
             className="versace font-normal text-4xl h-6"
           />
           <img
-            src="/assets/images/logo/zara-logo.png"
+            src="/assets/images/logo/zara.png"
             alt="Zara logo"
             className="zara font-normal text-4xl h-6"
           />
           <img
-            src="/assets/images/logo/gucci-logo.png"
+            src="/assets/images/logo/gucci.png"
             alt="Gucci logo"
             className="gucci font-normal text-4xl h-6"
           />
           <img
-            src="/assets/images/logo/prada-logo.png"
+            src="/assets/images/logo/prada.png"
             alt="Prada logo"
-            className="prada font-normal text-4xl h-6"
+            className="prada font-normal text-4xl "
           />
           <img
             src="/assets/images/logo/calvin.png"
             alt="Calvin Klein logo"
-            className="klein font-normal text-4xl h-6"
+            className="klein font-normal border-3 text-4xl h-6"
           />
         </div>
       </div>

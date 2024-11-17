@@ -17,7 +17,7 @@ function DressStyle() {
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/casual.png`}
                 alt=""
-                className="w-full h-44 object-cotain object-center"   
+                className="w-full h-44 object-cover object-center"   
               />
             </a>
           </div>
@@ -30,7 +30,7 @@ function DressStyle() {
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/formal.png`}
                 alt=""
-                className="w-full h-44 object-cotain object-center"
+                className="w-full h-44 object-cover  object-center"
               />
             </a>
           </div>
@@ -43,7 +43,7 @@ function DressStyle() {
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/party.png`}
                 alt=""
-                className="w-full h-44 object-cotain object-center"
+                className="w-full h-44 object-cover object-center"
               />
             </a>
           </div>
@@ -56,7 +56,7 @@ function DressStyle() {
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/gym.png`}
                 alt=""
-                className="w-full h-44 object-cotain object-center"
+                className="w-full h-44 object-cover object-center"
               />
             </a>
           </div>

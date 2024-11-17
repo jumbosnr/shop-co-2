@@ -1,17 +1,20 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { CartContext } from '../context/CartContext'; // Assuming a CartContext exists
 
 function LifeGraphic() {
   const location = useLocation();
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState('Large'); // Default size
+  const { addToCart } = useContext(CartContext); // Access the addToCart function
 
   // Extract URL parameters
   const queryParams = new URLSearchParams(location.search);
   const id = queryParams.get('id');
   const title = queryParams.get('title');
   const image = queryParams.get('image');
-  const price = queryParams.get('price');
+  const price = parseFloat(queryParams.get('price'));
 
   // Redirect to homepage if any parameter is missing
   useEffect(() => {
@@ -26,23 +29,41 @@ function LifeGraphic() {
     }
   };
 
+  const handleSizeSelection = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleAddToCart = () => {
+    const productDetails = {
+      id,
+      title,
+      image,
+      price,
+      size: selectedSize,
+      quantity,
+    };
+    // console.log('Adding to cart:', productDetails); // Check if this is printed
+    addToCart(productDetails);
+    navigate('/shopping-cart'); // Redirect to the cart page after adding to cart
+  };
+
   return (
     <section className="life-graphic">
       <div className="container max-w-6xl w-max mx-auto grid grid-cols-2 gap-5 py-14 px-12">
         <div className="left grid grid-cols-[max-content_auto] mt-4 gap-4">
-          <div className="col-1">
-            <a href="#" className="w-36 h-36 bg-gray-200 mb-4">
-              <img src="#" alt="" />
+          <div className="col-1grid grid-rows-3 ">
+            <a href="#" className="">
+              <img src={image} alt="" className="w-20 h-30 mb-4 border-2 "/>
             </a>
-            <a href="#" className="w-36 h-36 bg-gray-200 mb-4">
-              <img src="#" alt="" />
+            <a href="#" className="">
+              <img src={image} alt="" className="w-20 h-30 mb-4 border-2 "/>
             </a>
-            <a href="#" className="w-36 h-36 bg-gray-200 mb-4">
-              <img src="#" alt="" />
+            <a href="#" className="">
+              <img src={image} alt="" className="w-20 h-30 mb-4 border-2"/>
             </a>
           </div>
-          <div className="col-2 border-2 border-gray-400 w-full object-cover object-center">
-            <img src={image} alt="Product" className="" />
+          <div className="col-2 w-90 object-cover object-center">
+            <img src={image} alt="Product" className="border-2 border-gray-200 px-2 py-2 " />
           </div>
         </div>
 
@@ -58,42 +79,33 @@ function LifeGraphic() {
           <div className="d-price flex flex-row gap-2 py-4">
             <h5 className="text-xl font-bold text-black">${(price * 0.9).toFixed(2)}</h5>
             <span className="text-xl font-bold text-gray-500"><del>$300</del></span>
-            <span className="per bg-[#FF33331A] text-xs text-red-500 font-light rounded-full pt-1 pr-2 pb-1 pl-2 text-center">-%40</span>
+            <span className="per bg-[#FF33331A] text-xs text-red-500 font-light rounded-full pt-1 pr-2 pb-1 pl-2 text-center">-%10</span>
           </div>
           <p className="text-lg font-normal text-gray-500 py-2">
             This product is perfect for any occasion. 
           </p>
           <hr />
-          <div className="select-colours py-4">
-            <p className="py-2 text-gray-600">Select colors</p>
-            <div className="icons flex items-center gap-2">
-              <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-slate-500"><i className="bi bi-check-lg text-white text-2xl"></i></a>
-              <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-gray-500"><i className="bi bi-circle-fill text-[#314F4A] text-2xl invisible"></i></a>
-              <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-gray-500"><i className="bi bi-circle-fill text-[#31344F] text-2xl invisible"></i></a>
-            </div>
-          </div>
-          <hr />
           <div className="size py-4">
             <p className="py-2 text-gray-600">Choose Size</p>
             <div className="flex gap-2">
-              <a className="size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 text-center">Small</a>
-              <a className="size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center">Medium</a>
-              <a className="size bg-black text-base text-white font-light rounded-full px-4 py-2 text-center">Large</a>
-              <a className="size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center">X-Large</a>
+              <button onClick={() => handleSizeSelection('Small')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 text-center ${selectedSize === 'Small' && 'bg-black text-white'}`}>Small</button>
+              <button onClick={() => handleSizeSelection('Medium')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center ${selectedSize === 'Medium' && 'bg-black text-white'}`}>Medium</button>
+              <button onClick={() => handleSizeSelection('Large')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center ${selectedSize === 'Large' && 'bg-black text-white'}`}>Large</button>
+              <button onClick={() => handleSizeSelection('X-Large')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center ${selectedSize === 'X-Large' && 'bg-black text-white'}`}>X-Large</button>
             </div>
           </div>
           <hr />
           <div className="add-btn grid grid-cols-[max-content_auto] gap-4 py-4 mb-6">
             <div className="qt bg-gray-200 text-base flex items-center rounded-full w-max">
-              <a href="#" className="subtract" onClick={() => handleQuantityChange(quantity - 1)}>
+              <button onClick={() => handleQuantityChange(quantity - 1)} className="subtract">
                 <i className="bi bi-dash w-9 grid place-content-center"></i>
-              </a>
+              </button>
               <span className="figure w-9 grid place-content-center">{quantity}</span>
-              <a href="#" className="add" onClick={() => handleQuantityChange(quantity + 1)}>
+              <button onClick={() => handleQuantityChange(quantity + 1)} className="add">
                 <i className="bi bi-plus-lg"></i>
-              </a>
+              </button>
             </div>
-            <button href="#" className="grid place-content-center bg-black rounded-full text-base text-white font-light py-2">Add to Cart</button>
+            <button onClick={handleAddToCart} className="grid place-content-center bg-black rounded-full text-base text-white font-light py-2">Add to Cart</button>
           </div>
         </div>
       </div>

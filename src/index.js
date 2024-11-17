@@ -17,7 +17,7 @@ import './assets/stylesheets/mobile-style/home.css';
 import './assets/stylesheets/mobile-style/product-details.css';
 import './assets/stylesheets/mobile-style/store.css';
 import { AuthProvider } from './components/AuthContext'; // Correct path
-
+import { CartProvider } from './context/CartContext';
 import App from './App';
 
 // Create a client for react-query
@@ -34,9 +34,11 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </AuthProvider>
-    </QueryClientProvider> ,
+    </QueryClientProvider> 
   </React.StrictMode>
 );
 

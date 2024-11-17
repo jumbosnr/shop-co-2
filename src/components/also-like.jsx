@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Function to fetch products from the Fake Store API
 const fetchProducts = async () => {
@@ -36,10 +37,17 @@ function ProductList() {
   return (
     <section className="product-list py-14">
       <div className="container mx-auto max-w-6xl px-12">
-        <h2 className="font-bold text-4xl flex place-content-center text-black mb-6">You Might Also Like  </h2>
+        <h2 className="font-bold text-4xl flex place-content-center text-black mb-6">You Might Also Like</h2>
         <div className="items grid grid-cols-4 gap-4">
           {products.map((product) => (
-            <div key={product.id} className="col border p-4 rounded-lg shadow-lg">
+            <Link 
+              key={product.id}
+              to={{
+                pathname: `/product-details`,
+                search: `?id=${product.id}&title=${encodeURIComponent(product.title)}&image=${encodeURIComponent(product.image)}&price=${product.price}`
+              }}
+              className="col border p-4 transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
+            >
               <div className="top">
                 <img src={product.image} alt={product.title} className="w-full h-64 rounded-xl object-contain object-center" />
               </div>
@@ -56,7 +64,7 @@ function ProductList() {
                   <h5 className="text-xl font-bold text-black">${product.price.toFixed(2)}</h5>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

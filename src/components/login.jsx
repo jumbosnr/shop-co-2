@@ -78,13 +78,19 @@ function LoginC() {
             </div>
            
             <div className="input-box mb-7">
-              <a
-                href="/signup"
-                className="px-52 py-3 bg-black rounded-lg text-lg font-semibold text-white w-full active:bg-gray-700"
-              >
-                Sign Up
-              </a>
-              {serverError && <p className="text-red-500 text-sm">{serverError}</p>}
+              <p
+                className="px-10  text-lg font-semibold text-center text-black w-full "
+                >
+                  Don't an account?
+                <a
+                  href="/signup"
+
+                >
+                
+                  <span className="text-red-500 focus:font-bold" >  Sign Up</span>
+                </a>
+              </p>
+              {serverError && <p className="text-red-700 text-sm">{serverError}</p>}
             </div>
           </form>
         </div>

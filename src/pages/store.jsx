@@ -5,13 +5,14 @@ import Header from '../components/header';
 import Main from '../components/main-section';
 import Footer from '../components/footer';
 
+
 function Store() {
     return (
         <div>
             <Head />
             <Header />
             <main className="mx-auto max-w-6xl grid grid-cols-[max-content_auto] gap-5 px-10 py-14">
-                <aside className="max-w-6xl mx-auto px-10 border-2 border-gray-400 rounded-xl h-[calc(100%-200px)]">
+                <aside className="max-w-6xl mx-auto px-10 border-2 border-gray-400 rounded-xl h-[calc(100%-600px)]">
                     <div className="filter mb-6">
                         <h4 className="border-b-2 text-xl font-semibold py-6 flex justify-between items-center">
                             Filters <span><i className="bi bi-funnel-fill"></i></span>
@@ -42,7 +43,7 @@ function Store() {
                             </div>
                         </div>  */}
 
-                        <div className="colors border-b-2 py-6">
+                        {/* <div className="colors border-b-2 py-6">
                             <h4 className="text-2xl font-semibold text-black mb-4">Colours</h4>
                             <div className="col-c">
                                 <div className="icons flex flex-cols-1 gap-4 mb-4">
@@ -53,7 +54,7 @@ function Store() {
                                     <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-purple-500"></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="size mb-4 border-b-2">
                             <p className="text-gray-600 text-2xl font-semibold mb-4 py-4">Size</p>
@@ -65,17 +66,7 @@ function Store() {
                                 <a className="size bg-black text-base text-white font-light rounded-full px-4 py-2 text-center">Large</a>
                                 <a className="size bg-gray-200 text-[#00000099] text-base font-light rounded-full px-4 py-2 border text-center">X-Large</a>
                             </div>
-                            <div className="flex gap-2 py-4">
-                                <a className="size bg-gray-200 text-[#00000099] text-base font-light rounded-full px-4 py-2 border text-center">X-Large</a>
-                                <a className="size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 text-center">Small</a>
-                            </div>
-                            <div className="flex gap-2 py-4">
-                                <a className="size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center">Medium</a>
-                                <a className="size bg-black text-base text-white font-light rounded-full px-4 py-2 text-center">Large</a>
-                            </div>
-                            <div className="flex gap-2 py-4">
-                                <a className="size bg-gray-200 text-[#00000099] text-base font-light rounded-full px-4 py-2 border text-center">X-Large</a>
-                            </div>
+                          
                         </div>
 
                         <div className="dress-style mx-auto py6 mb-4">
