@@ -12,10 +12,13 @@ import './assets/stylesheets/tab-style/store.css';
 import './assets/stylesheets/tab-style/checkout.css';
 import './assets/stylesheets/tab-style/signup.css';
 import './assets/stylesheets/tab-style/login.css';
+import './assets/stylesheets/mobile-style/main.css';
 import './assets/stylesheets/mobile-style/m-main.css';
 import './assets/stylesheets/mobile-style/home.css';
 import './assets/stylesheets/mobile-style/product-details.css';
 import './assets/stylesheets/mobile-style/store.css';
+import './assets/stylesheets/exs-mobile/main.css';
+import './assets/stylesheets/exs-mobile/home.css';
 import { AuthProvider } from './components/AuthContext'; // Correct path
 import { CartProvider } from './context/CartContext';
 import App from './App';

@@ -5,7 +5,7 @@ import Store from './pages/store';
 import LifeGraphic from './pages/product-details';
 import ShoppingCart from './pages/shopping-cart';
 import PaymentPage from './pages/payment-page.jsx';
-import Login from './pages/login';
+// import Login from './pages/login';
 import SignUp from './pages/signup';
 import ProtectedRoute from './components/protectedRoutes.jsx';
 // import { AuthProvider } from './AuthContext'; // Correct path
@@ -28,10 +28,10 @@ function App() {
         <Route path="/product-details" element={<LifeGraphic />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
         <Route path="/payment-page" element={<PaymentPage />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/signup" element={<SignUp />} /> 
         <Route path="/login" element={<LoginC />} />
-        <Route path="/store" element={<ProtectedRoute><Store /></ProtectedRoute>} />
+        {/* <Route path="/store" element={<ProtectedRoute><Store /></ProtectedRoute>} /> */}
         {/* <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} /> */}
   {/* Add other routes here */}
     
