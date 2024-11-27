@@ -6,7 +6,7 @@ function LifeGraphic() {
   const location = useLocation();
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
-  const [selectedSize, setSelectedSize] = useState('Large'); // Default size
+  const [selectedSize, setSelectedSize] = useState(''); // Default size
   const { addToCart } = useContext(CartContext); // Access the addToCart function
 
   // Extract URL parameters
@@ -51,7 +51,7 @@ function LifeGraphic() {
     <section className="life-graphic">
       <div className="container max-w-6xl w-max mx-auto grid grid-cols-2 gap-5 py-14 px-12">
         <div className="left grid grid-cols-[max-content_auto] mt-4 gap-4">
-          <div className="col-1grid grid-rows-3 ">
+          <div className="col-1 grid grid-rows-3 ">
             <a href="#" className="">
               <img src={image} alt="" className="w-20 h-30 mb-4 border-2 "/>
             </a>
@@ -88,10 +88,37 @@ function LifeGraphic() {
           <div className="size py-4">
             <p className="py-2 text-gray-600">Choose Size</p>
             <div className="flex gap-2">
-              <button onClick={() => handleSizeSelection('Small')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 text-center ${selectedSize === 'Small' && 'bg-black text-white'}`}>Small</button>
-              <button onClick={() => handleSizeSelection('Medium')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center ${selectedSize === 'Medium' && 'bg-black text-white'}`}>Medium</button>
-              <button onClick={() => handleSizeSelection('Large')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center ${selectedSize === 'Large' && 'bg-black text-white'}`}>Large</button>
-              <button onClick={() => handleSizeSelection('X-Large')} className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center ${selectedSize === 'X-Large' && 'bg-black text-white'}`}>X-Large</button>
+              <button
+                onClick={() => handleSizeSelection('Small')} 
+                className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 text-center 
+                ${selectedSize === 'Small' ? 'bg-red-700 text-white' : '' }`}
+              >
+                Small
+              </button>
+
+              <button 
+                onClick={() => handleSizeSelection('Medium')} 
+                className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center 
+                ${selectedSize === 'Medium' ? 'bg-red-700 text-white' : '' }`}
+              >
+                Medium
+              </button>
+
+              <button 
+                onClick={() => handleSizeSelection('Large')} 
+                className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center 
+                ${selectedSize === 'Large' ? 'bg-red-700 text-white' : '' }`}
+                >
+                  Large
+              </button>
+
+              <button 
+                onClick={() => handleSizeSelection('X-Large')} 
+                className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center 
+                ${selectedSize === 'X-Large' ? 'bg-red-700 text-white' : ''}`}
+                >
+                  X-Large
+              </button>
             </div>
           </div>
           <hr />

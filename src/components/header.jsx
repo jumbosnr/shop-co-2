@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 function Header() {
   const { cartItems } = useContext(CartContext);
@@ -93,12 +94,12 @@ function Header() {
   return (
     <header className="bg-white">
       <div className="container mx-auto max-w-6xl flex flex-row py-5 px-12 items-center justify-between border-b-2">
-        <a href="#" className="h-menu" onClick={handleMenuClick}>
+        <Link to="#" className="h-menu" onClick={handleMenuClick}>
           <i className="bi bi-list"></i>
-        </a>
-        <a href="/" className="logo text-black text-3xl font-extrabold">
+        </Link>
+        <Link to="/" className="logo text-black text-3xl font-extrabold">
           <h1>SHOP.CO</h1>
-        </a>
+        </Link>
         <nav>
           <ul className="flex flex-row items-center gap-10">
             <li className="dropdown flex align-middle gap-5" ref={dropdownRef}>
@@ -112,9 +113,9 @@ function Header() {
                 </ul>
               )}
             </li>
-            <li><a href="/store">Store</a></li>
-            <li><a href="/dress-styles">Categories</a></li>
-            <li><a href="">About Us</a></li>
+            <li><Link to="/dress-styles">Categories</Link></li>
+            <li><Link to="/store">Store</Link></li>
+            <li><Link to="">About Us</Link></li>
           </ul>
         </nav>
         <div className="search-box pt-1 pb-1 rounded-2xl border-solid bg-gray-200 px-5 gap-2 py-2 relative">
@@ -147,17 +148,17 @@ function Header() {
           )}
         </div>
         <div className="user flex align-middle gap-5 relative">
-          <a href="/shopping-cart" className="relative">
+          <Link to="/shopping-cart" className="relative">
             <i className="bi bi-cart"></i>
             {totalCartQuantity > 0 && (
               <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2 text-xs">
                 {totalCartQuantity}
               </span>
             )}
-          </a>
-          <a href="/login">
+          </Link>
+          <Link to="/login">
             <i className="bi bi-person-circle"></i>
-          </a>
+          </Link>
         </div>
       </div>
     </header>

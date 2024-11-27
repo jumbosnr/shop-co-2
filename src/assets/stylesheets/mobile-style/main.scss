@@ -1,9 +1,16 @@
-@media screen and (max-width:560px){
+@media screen and (max-width:768px){
     header{     
         .container{
+            .logo{
+                h1{
+                    font-size: 1.5rem;
+                    margin-right: 5px;
+                }
+                
+            }
             .h-menu{
                 display: inline-block !important;
-                font-size: 50px;
+                font-size: 40px;
                 font-weight: 500;
                 align-items: center;
             }
@@ -11,8 +18,20 @@
                 display: none;
             }
             .search-box{
+                background: none;
+                display: flex;
+                flex-direction: row;
+                padding: 0.25rem;
+                .bi{
+                    display: none;
+                }
                 input{
-                    display: none !important;
+                    padding-right: 0.40rem;
+                    &:focus {
+                        outline-style: 2px solid black  !important;
+                        border: 2px solid black !important;
+                        border-radius: 30px;
+                    }
                 }
             }
         }

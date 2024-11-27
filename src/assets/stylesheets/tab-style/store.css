@@ -1,4 +1,4 @@
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 992px) {
   section.casual .product .row-1 {
     display: grid;
     grid-template-columns: 100%;

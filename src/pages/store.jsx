@@ -1,16 +1,16 @@
 import React from 'react';
 import Head from '../head-tags/home';
 import Slider from '../components/slider'; // Adjust the path as necessary
-import Header from '../components/header';
+// import Header from '../components/header';
 import Main from '../components/main-section';
-import Footer from '../components/footer';
+// import Footer from '../components/footer';
 
 
 function Store() {
     return (
         <div>
             <Head />
-            <Header />
+            {/* <Header /> */}
             <main className="mx-auto max-w-6xl grid grid-cols-[max-content_auto] gap-5 px-10 py-14">
                 <aside className="max-w-6xl mx-auto px-10 border-2 border-gray-400 rounded-xl h-[calc(100%-600px)]">
                     <div className="filter mb-6">
@@ -107,7 +107,7 @@ function Store() {
                     </div>
                 </div>
             </section>
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

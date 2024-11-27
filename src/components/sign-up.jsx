@@ -2,8 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate, Link } from 'react-router-dom';
 // Define validation schema with Zod
 const schema = z.object({
   email: z.string().email({ message: 'Invalid email address' }),
@@ -71,17 +70,17 @@ function SignUpC() {
                 className="px-10 py-3 rounded-lg text-lg font-semibold text-black text-center   w-full mb-2"
               >
                 <span>Have an account?  </span>
-                <a  
-                  href="/login" className="text-red-500"
+                <Link  
+                  to="/login" className="text-red-500"
                 >
 
                  Login 
-                </a>
+                </Link>
               </p>
               
-              <a href="#" className="text-black px-10 py-3 text-base font-semibold text-center block">
+              <Link to="#" className="text-black px-10 py-3 text-base font-semibold text-center block">
                 Forgot Password
-              </a>
+              </Link>
             </div>
           </form>
         </div>

@@ -17,6 +17,7 @@ import './assets/stylesheets/mobile-style/m-main.css';
 import './assets/stylesheets/mobile-style/home.css';
 import './assets/stylesheets/mobile-style/product-details.css';
 import './assets/stylesheets/mobile-style/store.css';
+import './assets/stylesheets/mobile-style/shopping-cart.css';
 import './assets/stylesheets/exs-mobile/main.css';
 import './assets/stylesheets/exs-mobile/home.css';
 import { AuthProvider } from './components/AuthContext'; // Correct path

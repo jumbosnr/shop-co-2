@@ -7,21 +7,24 @@ import ShoppingCart from './pages/shopping-cart';
 import PaymentPage from './pages/payment-page.jsx';
 // import Login from './pages/login';
 import SignUp from './pages/signup';
+import Header from './components/header.jsx';
 import ProtectedRoute from './components/protectedRoutes.jsx';
 // import { AuthProvider } from './AuthContext'; // Correct path
 import LoginC from './components/login.jsx';
 import ConfirmationMessage from './components/ConfirmationMessage.jsx';
 import DressStyle from './components/dress-styles.jsx';
+import Footer from './components/footer.jsx';
 // import Account from './components/Account'; // Adjust path based on location
 
 
 function App() {
   return (
     <Router>
+      <Header/>
       <Routes>
         {/* Home Page Route */}
         <Route path="/ConfirmationMessage" element={<ConfirmationMessage />} />
-        <Route path="/DressStyle" element={<DressStyle />} />
+        <Route path="/dressStyle" element={<DressStyle />} />
 
         <Route path="/" element={<Home />} />
         <Route path="/store" element={<Store />} />
@@ -33,11 +36,11 @@ function App() {
         <Route path="/login" element={<LoginC />} />
         {/* <Route path="/store" element={<ProtectedRoute><Store /></ProtectedRoute>} /> */}
         {/* <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} /> */}
-  {/* Add other routes here */}
-    
+        {/* Add other routes here */}
+  
         {/* Uncomment and update other routes as needed */}
-        
       </Routes>
+      <Footer/>
     </Router>
   );
 }

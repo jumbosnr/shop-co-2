@@ -14,7 +14,7 @@ function Home() {
   return (
     <div>
       <Head />
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <TopBanner />
       <NewArrivals />
@@ -22,7 +22,7 @@ function Home() {
       <DressStyles />
       <HappyCustomers />
       <LatestOffer />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

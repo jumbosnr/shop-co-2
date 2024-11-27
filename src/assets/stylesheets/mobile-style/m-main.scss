@@ -1,4 +1,4 @@
-@media screen and (max-width:560px){
+@media screen and (max-width:768px){
     header{     
         .container{
             .h-menu{
@@ -11,8 +11,9 @@
                 display: none;
             }
             .search-box{
+                background: none;
                 input{
-                    display: none !important;
+                    // display: none !important;
                 }
             }
         }

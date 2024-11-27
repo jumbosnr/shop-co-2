@@ -2,7 +2,7 @@
   display: none !important;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 768px) {
   body.active {
     overflow: hidden;
   }
@@ -44,6 +44,7 @@
   }
   header .container .search-box {
     background: none;
+    display: none !important;
   }
   header .container .search-box input {
     display: none !important;

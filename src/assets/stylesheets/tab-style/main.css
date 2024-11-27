@@ -2,7 +2,7 @@
   display: none !important;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 992px) {
   body.active {
     overflow: hidden;
   }
@@ -39,8 +39,10 @@
     left: 0;
     opacity: 1;
   }
+  header .container .search-box {
+    background: none;
+  }
   header .container .search-box input {
-    display: none !important;
     background: none;
   }
   section.latest-offer .container {

@@ -1,15 +1,13 @@
 .h-menu{
     display: none !important;
 }
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 992px){
     body.active{
         overflow: hidden;
     }
     header{     
         position: relative;
         .container{
-            // display: grid;
-            // grid-template-columns: max-content max-content max-content auto ;
             .h-menu{
                 display: inline-block !important;
                 font-size: 50px;
@@ -41,8 +39,9 @@
                 }
             }
             .search-box{
+                background: none;
                 input{
-                    display: none !important;
+                    // display: none !important;
                     background: none;
                 }
             }

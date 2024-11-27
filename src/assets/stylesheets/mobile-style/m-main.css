@@ -1,4 +1,4 @@
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 768px) {
   header .container .h-menu {
     display: inline-block !important;
     font-size: 50px;
@@ -8,8 +8,8 @@
   header .container nav {
     display: none;
   }
-  header .container .search-box input {
-    display: none !important;
+  header .container .search-box {
+    background: none;
   }
   section.latest-offer .container.main {
     padding: 20px;

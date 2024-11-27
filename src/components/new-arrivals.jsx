@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-// NewArrivals component to display the fetched products
 function NewArrivals() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -31,8 +30,6 @@ function NewArrivals() {
         <h2 className="font-bold text-4xl flex justify-center text-black mb-6">
           NEW ARRIVAL
         </h2>
-
-        {/* Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           {limitedProducts.map((product) => (
             <Link
@@ -40,7 +37,7 @@ function NewArrivals() {
               to={`/product-details?id=${product.id}&title=${encodeURIComponent(
                 product.title
               )}&image=${encodeURIComponent(product.image)}&price=${product.price}`}
-              className="bg-white p-4  transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
+              className="bg-white p-4 transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
             >
               <div className="top">
                 <img
@@ -55,10 +52,7 @@ function NewArrivals() {
                   .fill(0)
                   .map((_, index) => (
                     <span key={index}>
-                      <i
-                        className="bi bi-star-fill star text-yellow-400"
-                        aria-hidden="true"
-                      ></i>
+                      <i className="bi bi-star-fill star text-yellow-400" aria-hidden="true"></i>
                     </span>
                   ))}
               </div>
@@ -68,13 +62,13 @@ function NewArrivals() {
             </Link>
           ))}
         </div>
-
-        <a  
-          href="/store"
+        <Link 
+          to="/store" 
           className="px-10 py-2 text-black rounded-full bg-white border-2 border-gray-200 text-center hidden"
-          >
+        >
           View All
-        </a>
+            
+        </Link>
       </div>
     </section>
   );

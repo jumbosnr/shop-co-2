@@ -69,9 +69,12 @@ function TopSelling() {
           ))}
         </div>
 
-        <a href="/" className="px-10 py-2 text-black rounded-full bg-white border-2 border-gray-200 text-center hidden">
+        <Link 
+          to="/store" 
+          className="px-10 py-2 text-black rounded-full bg-white border-2 border-gray-200 text-center hidden"
+        >
           View All
-        </a>
+        </Link>
       </div>
     </section>
   );

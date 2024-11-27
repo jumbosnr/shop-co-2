@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const schema = z.object({
   email: z.string().email('Invalid email format'),
@@ -82,13 +82,13 @@ function LoginC() {
                 className="px-10  text-lg font-semibold text-center text-black w-full "
                 >
                   Don't an account?
-                <a
-                  href="/signup"
+                <Link
+                  to="/signup"
 
                 >
                 
                   <span className="text-red-500 focus:font-bold" >  Sign Up</span>
-                </a>
+                </Link>
               </p>
               {serverError && <p className="text-red-700 text-sm">{serverError}</p>}
             </div>

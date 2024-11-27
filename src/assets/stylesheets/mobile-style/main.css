@@ -1,15 +1,33 @@
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 768px) {
+  header .container .logo h1 {
+    font-size: 1.5rem;
+    margin-right: 5px;
+  }
   header .container .h-menu {
     display: inline-block !important;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 500;
     align-items: center;
   }
   header .container nav {
     display: none;
   }
+  header .container .search-box {
+    background: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0.25rem;
+  }
+  header .container .search-box .bi {
+    display: none;
+  }
   header .container .search-box input {
-    display: none !important;
+    padding-right: 0.4rem;
+  }
+  header .container .search-box input:focus {
+    outline-style: 2px solid black !important;
+    border: 2px solid black !important;
+    border-radius: 30px;
   }
   section.latest-offer .container.main {
     padding: 20px;
@@ -45,4 +63,4 @@
     display: grid;
     grid-template-columns: 100%;
   }
-}/*# sourceMappingURL=m-main.css.map */
+}/*# sourceMappingURL=main.css.map */
