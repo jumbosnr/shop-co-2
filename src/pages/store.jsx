@@ -10,7 +10,6 @@ function Store() {
     return (
         <div>
             <Head />
-            {/* <Header /> */}
             <main className="mx-auto max-w-6xl grid grid-cols-[max-content_auto] gap-5 px-10 py-14">
                 <aside className="max-w-6xl mx-auto px-10 border-2 border-gray-400 rounded-xl h-[calc(100%-600px)]">
                     <div className="filter mb-6">
@@ -27,35 +26,7 @@ function Store() {
                         </div>
 
                         <Slider />
-                        {/* <div className="price border-b-2 py-6">
-
-                            <h4 className="text-2xl font-semibold text-black py-2">Price</h4>
-                            <div className="slider-box px-2">
-                                <div className="range bg-gray-200 h-1 rounded-md">
-                                    <div className="slider h-full bg-black w-4/5 rounded-full relative">
-                                        <span className="btn block rounded-full w-6 h-6 bg-black absolute right-0 top-2/4 transform -translate-y-1/2 translate-x-1/2"></span>
-                                    </div>
-                                </div>
-                            </div> 
-                            <div className="indicators flex items-center justify-between mb-4 px-2">
-                                <h4 className="text-black text-lg font-semibold">$50</h4>
-                                <h4 className="text-black text-lg font-semibold">$200</h4>
-                            </div>
-                        </div>  */}
-
-                        {/* <div className="colors border-b-2 py-6">
-                            <h4 className="text-2xl font-semibold text-black mb-4">Colours</h4>
-                            <div className="col-c">
-                                <div className="icons flex flex-cols-1 gap-4 mb-4">
-                                    <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-yellow-500"></a>
-                                    <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-red-500"></a>
-                                    <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-green-500"></a>
-                                    <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-blue-500"></a>
-                                    <a href="#" className="w-9 h-9 grid place-content-center rounded-full bg-purple-500"></a>
-                                </div>
-                            </div>
-                        </div> */}
-
+    
                         <div className="size mb-4 border-b-2">
                             <p className="text-gray-600 text-2xl font-semibold mb-4 py-4">Size</p>
                             <div className="flex gap-2 py-4">
@@ -107,7 +78,6 @@ function Store() {
                     </div>
                 </div>
             </section>
-            {/* <Footer /> */}
         </div>
     );
 };

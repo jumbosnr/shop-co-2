@@ -40,7 +40,7 @@ function PaymentPage() {
                 <label className="text-base font-semibold block mb-2">Full Name</label>
                 <input
                   type="text"
-                  className="border-2 px-3 py-3 w-full"
+                  className="border-2 px-3 py-3 w-full "
                   placeholder="Enter your full name"
                 />
               </div>

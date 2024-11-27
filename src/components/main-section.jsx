@@ -45,7 +45,7 @@ function ProductSection() {
             <Link
               to={`/product-details?id=${product.id}&title=${encodeURIComponent(product.title)}&image=${encodeURIComponent(product.image)}&price=${product.price}`}
               key={product.id}
-              className="col-1 px-4 py-4 transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
+              className="col-1 p-4 transform transition-transform hover:scale-105 duration-300 ease-in-out rounded-lg shadow-md hover:shadow-lg"
             >
               <div className="top">
                 <img
@@ -55,7 +55,7 @@ function ProductSection() {
                 />
               </div>
               <div className="bottom mt-4">
-                <p className="text-lg font-semibold mb-2">{product.title}</p>
+                <p className="text-lg font-semibold mt-4 mb-2">{product.title}</p>
                 <div className="icon mb-2">
                   {[...Array(5)].map((_, index) => (
                     <span key={index}>
@@ -63,7 +63,7 @@ function ProductSection() {
                     </span>
                   ))}
                 </div>
-                <div className="price">
+                <div className="price mt-2">
                   <h5 className="text-xl font-bold text-black">${product.price}</h5>
                 </div>
               </div>

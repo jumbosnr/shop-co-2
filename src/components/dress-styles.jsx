@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function DressStyle() {
   return (
@@ -13,52 +14,52 @@ function DressStyle() {
             <h4 className="absolute top-5 left-5 text-2xl font-bold text-black">
               Casual
             </h4>
-            <a href="#" className="text-lg block">
+            <Link to="#" className="text-lg block">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/casual.png`}
                 alt=""
                 className="w-full h-44 object-cover object-center"   
               />
-            </a>
+            </Link >
           </div>
 
           <div className="pic formal col-span-2 relative">
             <h4 className="absolute top-5 left-5 text-2xl font-bold text-black">
               Formal
             </h4>
-            <a href="#" className="text-lg block">
+            <Link to="#" className="text-lg block">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/formal.png`}
                 alt=""
                 className="w-full h-44 object-cover  object-center"
               />
-            </a>
+            </Link >
           </div>
 
           <div className="pic party col-span-2 relative">
             <h4 className="absolute top-5 left-5 text-2xl font-bold text-black">
               Party
             </h4>
-            <a href="#" className="text-lg block">
+            <Link to="#" className="text-lg block">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/party.png`}
                 alt=""
                 className="w-full h-44 object-cover object-center"
               />
-            </a>
+            </Link >
           </div>
           
           <div className="pic gym relative">
             <h4 className="absolute top-5 left-5 text-2xl font-bold text-black">
               Gym
             </h4>
-            <a href="#" className="text-lg block">
+            <Link to="#" className="text-lg block">
               <img
                 src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/gym.png`}
                 alt=""
                 className="w-full h-44 object-cover object-center"
               />
-            </a>
+            </Link >
           </div>
         </div>
       </div>

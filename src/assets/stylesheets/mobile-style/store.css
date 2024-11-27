@@ -16,17 +16,17 @@
   section.casual .product .row-1 {
     display: grid;
     grid-template-columns: 100%;
-    max-width: 400px;
+    max-width: 200px;
   }
   section.casual .product .row-2 {
     display: grid;
     grid-template-columns: 100%;
-    max-width: 400px;
+    max-width: 200px;
   }
   section.casual .product .row-3 {
     display: grid;
     grid-template-columns: 100%;
-    max-width: 400px;
+    max-width: 200px;
   }
   section.casual .product .pagitation a {
     display: none;
