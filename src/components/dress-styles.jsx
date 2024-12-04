@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import casual from "../assets/Images/dress-styles/casual.png";
+import formal from "../assets/Images/dress-styles/formal.png";
+import party from "../assets/Images/dress-styles/party.png";
+import gym from "../assets/Images/dress-styles/gym.png";
+
 
 function DressStyle() {
   return (
@@ -16,7 +21,7 @@ function DressStyle() {
             </h4>
             <Link to="#" className="text-lg block">
               <img
-                src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/casual.png`}
+                src={ casual }
                 alt=""
                 className="w-full h-44 object-cover object-center"   
               />
@@ -29,7 +34,7 @@ function DressStyle() {
             </h4>
             <Link to="#" className="text-lg block">
               <img
-                src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/formal.png`}
+                src={ formal }
                 alt=""
                 className="w-full h-44 object-cover  object-center"
               />
@@ -42,7 +47,7 @@ function DressStyle() {
             </h4>
             <Link to="#" className="text-lg block">
               <img
-                src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/party.png`}
+                src={ party }
                 alt=""
                 className="w-full h-44 object-cover object-center"
               />
@@ -55,7 +60,7 @@ function DressStyle() {
             </h4>
             <Link to="#" className="text-lg block">
               <img
-                src={`${process.env.PUBLIC_URL}/assets/images/dress-styles/gym.png`}
+                src={ gym }
                 alt=""
                 className="w-full h-44 object-cover object-center"
               />

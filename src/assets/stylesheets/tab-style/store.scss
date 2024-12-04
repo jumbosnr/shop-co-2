@@ -4,15 +4,15 @@
         .product{
             .row-1{
                 display:grid;
-                grid-template-columns:100%;
+                grid-template-columns: repeat(2,1fr);
             }
             .row-2{
                 display:grid;
-                grid-template-columns:100%;
+                grid-template-columns: repeat(2,1fr);
             }
             .row-3{
                 display:grid;
-                grid-template-columns:100%;
+                grid-template-columns: repeat(2,1fr);
             }
         }
     }

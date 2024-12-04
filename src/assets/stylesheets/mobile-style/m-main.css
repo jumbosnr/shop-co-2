@@ -6,7 +6,9 @@
     align-items: center;
   }
   header .container nav {
-    display: none;
+    height: 30vh !important;
+    width: 30%;
+    background: #fff;
   }
   header .container .search-box {
     background: none;

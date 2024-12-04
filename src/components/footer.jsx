@@ -12,16 +12,16 @@ function Footer() {
               From women to men.
             </p>
             <div className="socials flex align-middle text-lg gap-5">
-              <a href="#" className="bi bi-facebook bg-slate-100 p-3 rounded-full" aria-label="Facebook">
+              <a href="#" className="bi bi-facebook bg-slate-100 p-3 rounded-full hover:text-lg hover:font-bold transition-transform duration-500 transform hover:-translate-y-2" aria-label="Facebook">
                 {/* <i className="bi bi-facebook"></i> */}
               </a>
-              <a href="#" className="bi bi-instagram bg-slate-100 p-3 rounded-full" aria-label="Instagram">
+              <a href="#" className="bi bi-instagram bg-slate-100 p-3 rounded-full hover:text-lg hover:font-bold transition-transform duration-500 transform hover:-translate-y-2" aria-label="Instagram">
                 {/* <i className="bi bi-instagram"></i> */}
               </a>
-              <a href="#" className="bi bi-github bg-slate-100 p-3 rounded-full" aria-label="Github">
+              <a href="#" className="bi bi-github bg-slate-100 p-3 rounded-full hover:text-lg hover:font-bold transition-transform duration-500 transform hover:-translate-y-2" aria-label="Github">
                 {/* <i className="bi bi-github"></i> */}
               </a>
-              <a href="#" className="bi bi-twitter-x bg-slate-100 p-3 rounded-full" aria-label="Twitter">
+              <a href="#" className="bi bi-twitter-x bg-slate-100 p-3 rounded-full hover:text-lg hover:font-bold transition-transform duration-500 transform hover:-translate-y-2" aria-label="Twitter">
                 {/* <i className="bi bi-twitter-x"></i> */}
               </a>
             </div>
@@ -31,16 +31,16 @@ function Footer() {
           <nav>
             <h4 className="text-lg font-semibold text-black mb-5">COMPANY</h4>
             <ul className="font-light text-base mb-10">
-              <li className="font-light text-base mb-5 hover:underline hover:bg-slate-950 hover:shadow[0_0_10px_#ffeb3b]">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">About</a>
               </li>
-              <li className="font-light text-base mb-5 hover:underline hover:bg-slate-950 hover:shadow[0_0_10px_#ffeb3b]">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">Features</a>
               </li>
-              <li className="font-light text-base mb-5 hover:underline hover:bg-slate-950 hover:shadow[0_0_10px_#ffeb3b]">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">Works</a>
               </li>
-              <li className="font-light text-base mb-5 hover:underline hover:bg-slate-950 hover:shadow[0_0_10px_#ffeb3b]">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">Career</a>
               </li>
             </ul>
@@ -48,16 +48,16 @@ function Footer() {
           <nav>
             <h4 className="text-lg font-semibold text-black mb-5">HELP</h4>
             <ul className="font-light text-base mb-5">
-              <li className="font-light text-base mb-5">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">Customer Support</a>
               </li>
-              <li className="font-light text-base mb-5">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">Delivery Details</a>
               </li>
-              <li className="font-light text-base mb-5">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">Terms & Condition</a>
               </li>
-              <li className="font-light text-base mb-5">
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300">
                 <a href="#">Privacy Policy</a>
               </li>
             </ul>
@@ -65,19 +65,19 @@ function Footer() {
           <nav>
             <h4 className="text-lg font-semibold text-black mb-5">FAQ</h4>
             <ul className="font-light text-base mb-5">
-              <li className="font-light text-base mb-5"><a href="#">account</a></li>
-              <li className="font-light text-base mb-5"><a href="#">Manage Deliveries</a></li>
-              <li className="font-light text-base mb-5"><a href="#">Orders</a></li>
-              <li className="font-light text-base mb-5"><a href="#">Payments</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">Account</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">Manage Deliveries</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">Orders</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">Payments</a></li>
             </ul>
           </nav>
           <nav>
             <h4 className="text-lg font-semibold text-black mb-5">RESOURCES</h4>
             <ul className="font-light text-base mb-5">
-              <li className="font-light text-base mb-5"><a href="#">Free eBooks</a></li>
-              <li className="font-light text-base mb-5"><a href="#">Development Tutorial</a></li>
-              <li className="font-light text-base mb-5"><a href="#">How to - Blog</a></li>
-              <li className="font-light text-base mb-5"><a href="#">Youtube Playlist</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">Free eBooks</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">Development Tutorial</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">How to - Blog</a></li>
+              <li className="font-light text-base mb-5 text-black hover:text-black hover:text-lg hover:underline transform hover-scale-110 transition duration-300"><a href="#">Youtube Playlist</a></li>
             </ul>
           </nav>
         </div>

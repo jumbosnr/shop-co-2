@@ -41,7 +41,7 @@ function ProductSection() {
 
       <div className="product max-w-6xl mx-auto">
         <div className="row-1 grid grid-cols-3 gap-4 mb-4">
-          {data.slice(0, 9).map((product) => (
+          {data.slice(0, 30).map((product) => (
             <Link
               to={`/product-details?id=${product.id}&title=${encodeURIComponent(product.title)}&image=${encodeURIComponent(product.image)}&price=${product.price}`}
               key={product.id}

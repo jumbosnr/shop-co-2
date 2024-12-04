@@ -1,15 +1,15 @@
 @media screen and (max-width: 992px) {
   section.casual .product .row-1 {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
   section.casual .product .row-2 {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
   section.casual .product .row-3 {
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
   main aside {
     padding-bottom: 40px;

@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState, }from 'react';
 import Head from '../head-tags/home';
 import Slider from '../components/slider'; // Adjust the path as necessary
 // import Header from '../components/header';
@@ -7,11 +8,16 @@ import Main from '../components/main-section';
 
 
 function Store() {
+    const [selectedSize, setSelectedSize] = useState(''); // Default size
+    const handleSizeSelection = (size) => {
+        setSelectedSize(size);
+    };
+    
     return (
         <div>
             <Head />
             <main className="mx-auto max-w-6xl grid grid-cols-[max-content_auto] gap-5 px-10 py-14">
-                <aside className="max-w-6xl mx-auto px-10 border-2 border-gray-400 rounded-xl h-[calc(100%-600px)]">
+                <aside className="max-w-6xl mx-auto px-10  border-gray-400 rounded-xl h-[calc(100%-600px)]">
                     <div className="filter mb-6">
                         <h4 className="border-b-2 text-xl font-semibold py-6 flex justify-between items-center">
                             Filters <span><i className="bi bi-funnel-fill"></i></span>
@@ -27,17 +33,41 @@ function Store() {
 
                         <Slider />
     
-                        <div className="size mb-4 border-b-2">
-                            <p className="text-gray-600 text-2xl font-semibold mb-4 py-4">Size</p>
-                            <div className="flex gap-2 py-4">
-                                <a className="size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 text-center">Small</a>
-                                <a className="size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center">Medium</a>
+                        <div className="size py-4">
+                            <p className="py-2 text-gray-600">Choose Size</p>
+                            <div className="grid gap-2">
+                                <button
+                                  onClick={() => handleSizeSelection('Small')} 
+                                  className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 text-center 
+                                  ${selectedSize === 'Small' ? 'bg-red-700 text-white' : '' }`}
+                                >
+                                  Small
+                                </button>
+    
+                                <button 
+                                  onClick={() => handleSizeSelection('Medium')} 
+                                  className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center 
+                                  ${selectedSize === 'Medium' ? 'bg-red-700 text-white' : '' }`}
+                                >
+                                  Medium
+                                </button>
+                
+                                <button 
+                                  onClick={() => handleSizeSelection('Large')} 
+                                  className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center 
+                                  ${selectedSize === 'Large' ? 'bg-red-700 text-white' : '' }`}
+                                  >
+                                    Large
+                                </button>
+                
+                                <button 
+                                  onClick={() => handleSizeSelection('X-Large')} 
+                                  className={`size bg-gray-200 text-[#00000099] font-light rounded-full px-4 py-2 border text-center 
+                                  ${selectedSize === 'X-Large' ? 'bg-red-700 text-white' : ''}`}
+                                  >
+                                    X-Large
+                                </button>
                             </div>
-                            <div className="flex gap-2 py-4">
-                                <a className="size bg-black text-base text-white font-light rounded-full px-4 py-2 text-center">Large</a>
-                                <a className="size bg-gray-200 text-[#00000099] text-base font-light rounded-full px-4 py-2 border text-center">X-Large</a>
-                            </div>
-                          
                         </div>
 
                         <div className="dress-style mx-auto py6 mb-4">

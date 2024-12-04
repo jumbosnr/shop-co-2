@@ -8,7 +8,10 @@
                 align-items: center;
             }
             nav{
-                display: none;
+                // display: none;
+                height: 30vh !important;
+                width: 30%;
+                background: #fff;
             }
             .search-box{
                 background: none;
